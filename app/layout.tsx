@@ -8,7 +8,9 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Gabriel Rhys D. Ambongan | Web Developer",
   description: "Personal portfolio of Gabriel Rhys D. Ambongan, a passionate Web Developer",
-   
+  icons: {
+    icon: "/gab.png",
+  },
 }
 
 export default function RootLayout({
