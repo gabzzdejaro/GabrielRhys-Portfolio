@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128px" height="128px" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+    <path fill="#E44D26" d="M128 0L16 32l16 176 96 48 96-48 16-176L128 0z"/>
+    <path fill="#F16529" d="M128 16v208l80-40 12-168H128z"/>
+    <path fill="#EBEBEB" d="M128 96h-48l-4-40h52V16H48l12 120h68v-40z"/>
+    <path fill="#FFF" d="M128 96v40h52l-8 72-44 12v40l80-32 12-132h-92z"/>
+</svg> 
