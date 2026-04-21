@@ -332,6 +332,18 @@ export default function Home() {
                 "Designed responsive layouts for mobile and desktop",
               ]}
             />
+
+            <ContributionItem
+              title="SellGo PH"
+              role="Full Stack Developer"
+              description="Developed a web-based platform designed to help Filipino online sellers learn and grow their businesses through guided tutorials and tools."
+              contributions={[
+                "Designed and developed the onboarding, dashboard, and tutorial system",
+                "Built a Featured Seller Promotion system with flexible pricing (₱30/kg or flat rate)",
+                "Integrated Firebase for database management and hosting",
+                 "Created a user-friendly and beginner-focused interface",
+              ]}
+            />
           </div>
         </div>
       </section>
