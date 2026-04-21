@@ -19,6 +19,7 @@ import {
   Layers,
 } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import ContactForm from "@/components/contact-form"
 
 // Add this mapping before the TechStackItem component
@@ -262,20 +263,34 @@ export default function Home() {
               title="Design Templates for Creators & Businesses"
               description="canvaaa is a platform offering a wide range of professionally designed templates for social media, marketing, and branding. It helps businesses and creators stand out with eye-catching designs, making professional content creation accessible to everyone."
               technologies={["TypeScript", "JavaScript", "React", "HTML", "CSS"]}
-              imageUrl="/canva.png?height=200&width=400"
+              images={["/canva.png?height=200&width=400"]}
             />
             <ProjectCard
               title="Voting System"
               description="A responsive online voting system with secure authentication, ballot management, and real-time vote tracking. Features include an admin dashboard, candidate and voter management, and PDF report generation. The system uses Bootstrap for responsive design and integrates various JavaScript libraries for enhanced interactivity."
               technologies={["PHP", "HTML", "CSS", "JavaScript", "MySQL"]}
-              imageUrl="/votesystem.png?height=200&width=400"
+              images={["/votesystem.png?height=200&width=400"]}
             />
             <ProjectCard
               title="Food Delivery Website"
               description="A modern, responsive food delivery platform featuring a dynamic menu, shopping cart, and real-time order management with dark mode support."
               technologies={["TypeScript/TSX", "Nex.js", "React", "Tailwind CSS", "Shadcn UI"]}
-              imageUrl="/food.png?height=200&width=400"
+              images={["/food.png?height=200&width=400"]}
             />
+
+            <ProjectCard
+              title="SellGoPh"
+              description="SellGoPH is a platform offering a comprehensive suite of tools for promoting and selling products online in the Philippines. It helps businesses and creators reach their target audience with effective marketing strategies and analytics, making professional product promotion and e-commerce accessible to everyone."
+              technologies={["TypeScript/TSX", "JavaScript", "React", "HTML", "CSS"]}
+              images={[
+    "/sellgo1.png",
+    "/sellgo2.png",
+    "/sellgo3.png",
+    "/sellgo4.png",
+    "/sellgo5.png"
+  ]}
+            />
+            
           </div>
         </div>
       </section>
@@ -409,18 +424,28 @@ function ProjectCard({
   title,
   description,
   technologies,
-  imageUrl,
+  images,
 }: {
   title: string
   description: string
   technologies: string[]
-  imageUrl: string
+  images: string[]
 }) {
   return (
     <Card className="bg-[#1a2639] border-gray-700 overflow-hidden">
-      <div className="relative h-48 w-full">
-        <Image src={imageUrl || "/placeholder.svg"} alt={title} fill className="object-cover" />
-      </div>
+      <Carousel className="w-full">
+        <CarouselContent>
+          {images.map((image, index) => (
+            <CarouselItem key={index}>
+              <div className="relative h-48 w-full">
+                <Image src={image || "/placeholder.svg"} alt={`${title} ${index + 1}`} fill className="object-cover" />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
       <CardContent className="p-6">
         <h3 className="text-xl font-bold mb-2">{title}</h3>
         <p className="text-gray-300 mb-4">{description}</p>
